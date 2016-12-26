@@ -87,59 +87,66 @@ var common = {
             sub: {}
         }
     },
+    selfLink:"",
     showMenu: function () {
         //获取当前的link
         var pathname = window.location.pathname;
         console.log(pathname);
         var start = pathname.indexOf("FuckTheWorld/") + "FuckTheWorld/".length;
-        var selfLink = pathname.substr(start);
-        console.log(selfLink);
+        common.selfLink = pathname.substr(start);
+        console.log(common.selfLink);
 
 
         var menu = "";
-        menu += '<ul class="am-menu-nav am-avg-sm-1">';
-        $.each(common.menu, function (key, data) {
-            menu += '<li class="">';
-            menu += '<a href="';
+        menu += '<div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>';
+        menu += '<div class="sideMenu">';
+        $.each(common.menu,function (key,data) {
             if (data.link == "")
                 data.link = "javascript:void(0);";
-            menu += data.link + '">';
             if (data.icon == "")
                 data.icon = "arrow-right";
-            menu += '<span class="am-icon-' + data.icon + '"></span>';
-            menu += key + '</a>';
+            var link = data.link;
+            if(link.indexOf("../") == 0)
+                link=link.substr(3);
+            if(link == common.selfLink)
+                data.icon += " on";
+            console.log(link);
+            menu+='<h3 class="am-icon-'+data.icon+'"><em></em> <a href="'+data.link+'">'+key+'</a></h3>';
+            menu += ' <ul>';
             if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub)) {
                 menu += common.getSubMenu(data.sub);
             }
-            menu += '</li>';
+            menu += '</ul>';
         });
-        menu += '</ul>';
+        menu += "</div>";
 
-        $("nav.header").append(menu);
         console.log(menu);
+        $(".admin-main").prepend(menu);
+        common.menuJs();
     },
     getSubMenu: function (sub) {
         var menu = "";
-        menu += ' <ul class="am-menu-sub am-avg-sm-1 ">';
         $.each(sub, function (key, data) {
-            menu += '<li class="">';
-            menu += '<a href="';
             if (data.link == "")
                 data.link = "javascript:void(0);";
-            menu += data.link + '">';
             if (data.icon == "")
                 data.icon = "arrow-right";
-            menu += '<span class="am-icon-' + data.icon + '"></span>';
-            menu += key + '</a>';
+
+            var link = data.link;
+            var active = "";
+            if(link.indexOf("../") == 0)
+                link=link.substr(3);
+            if(link == common.selfLink)
+                active = 'active';
+            menu += '<li>';
+            menu += '<a href="'+data.link+'" class="'+active+'"><span class="am-icon-'+data.icon+'"></span>'+key+'</a>';
             if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub)) {
+                menu += ' <ul>';
                 menu += common.getSubMenu(data.sub);
+                menu += '</ul>';
             }
             menu += '</li>';
         });
-        menu += '</ul>';
-
-        console.log(menu);
-
         return menu;
     },
     isEmptyObj:function (obj) {
@@ -150,12 +157,41 @@ var common = {
         }
         return true;
     },
+    menuJs:function () {
+        $(".sideMenu").find("h3").removeClass("on");
+        $(".sideMenu").find("a").each(function () {
+           if($(this).hasClass("active")){
+               $(this).parent().parent().prev().addClass("on");
+           }
+        });
+
+        jQuery(".sideMenu").slide({
+            titCell:"h3", //鼠标触发对象
+            targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+            effect:"slideDown", //targetCell下拉效果
+            delayTime:300 , //效果时间
+            triggerTime:150, //鼠标延迟触发时间（默认150）
+            defaultPlay:true,//默认是否执行效果（默认true）
+            returnDefault:false //鼠标从.sideMen移走后返回默认状态（默认false）
+        });
+    },
     showHeader:function(){
 
+    },
+    showFooter:function () {
+        var footer = "<footer>";
+        footer += '<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >'
+            +'<a href="#top" title="回到顶部">'
+            +'<span class="am-gotop-title">回到顶部</span>'
+            +'<i class="am-icon-btn am-icon-chevron-up am-active"></i>'
+            +'</a>'
+            +'</div>';
+        $(".admin-main").append(footer);
     },
     run: function () {
         this.showHeader();
         this.showMenu();
+        this.showFooter();
     }
 };
 common.run();
