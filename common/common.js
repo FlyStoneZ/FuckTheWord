@@ -114,7 +114,7 @@ var common = {
 
 
         var menu = "";
-        menu += '<div class="sideMenu">';
+        menu += '<div class="sideMenu am-u-sm-12 am-u-md-4 am-u-lg-2">';
         menu += '<img class="logo" src="http://pinwheel-cn.com/public/home/images/sas-logo.png">';
 
         $.each(common.menu,function (key,data) {
@@ -201,8 +201,11 @@ var common = {
         });
     },
     showHeader:function(){
-        var header = '<h1 class="am-topbar-brand">欢迎 <span class="nickname">ywt0111</span> 回来！请使用闲置资金！</h1>';
+        var header = '<h1 class="am-topbar-brand">欢迎 <span class="nickname">ywt0111</span> 回来！请使用闲置资金！<span class="am-icon-list showMenu"></span></h1>';
         $("header").append(header);
+        $("header").find("span.showMenu").click(function () {
+           $(".sideMenu").toggleClass("active");
+        });
     },
     showFooter:function () {
         var footer = "<footer>";
