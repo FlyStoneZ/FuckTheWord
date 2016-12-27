@@ -201,7 +201,8 @@ var common = {
         });
     },
     showHeader:function(){
-
+        var header = '<h1 class="am-topbar-brand">欢迎 <span class="nickname">ywt0111</span> 回来！请使用闲置资金！</h1>';
+        $("header").append(header);
     },
     showFooter:function () {
         var footer = "<footer>";
