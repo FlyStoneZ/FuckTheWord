@@ -1,0 +1,27 @@
+body{
+    background: url(http://pinwheel-cn.com/public/home/images/mainbg.jpg) no-repeat top center;
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+.main>img.logo{
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+.main>form{
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 40px 20px 20px 20px;
+    background-color: rgba(255,255,255,.6);
+}
+.main>form span.reg{
+    color: #777;
+}
+.main>form .bottom{
+    font-size: 14px;
+}
+a.red{
+    color: #ed3623;
+}

@@ -90,7 +90,8 @@ gallery.html css
 */
 
 .page-404{background: #fff;border: none;width: 200px;margin: 0 auto}
-.sideMenu{padding: 0px;margin: 0px;max-width: 300px;background: #2a3542;height: 100%; }
+.sideMenu{padding: 10px 0;margin: 0px;max-width: 300px;background: #2a3542;height: 100%; }
+.sideMenu img.logo{display: block;margin:10px auto;max-width: 180px;}
 .sideMenu h3{height: 32px;line-height: 32px;color: #aeb2b7;cursor: pointer;padding: 0 0 0 10px;margin: 10px 0 0 0;border-top-left-radius: 3px;border-top-right-radius: 3px;font-weight: 400;width: 100% }
 .sideMenu h3 em{float: right;display: block;width: 40px;height: 32px;background: url(../i/icoAdd.png) 16px 12px no-repeat;cursor: pointer}
 .sideMenu h3.on em{background-position: 16px -57px}

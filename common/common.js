@@ -5,30 +5,36 @@ var common = {
     menu: {
         "首页": {
             icon: "home",
+            class: "",
             link: "",
             sub: {}
         },
         "会员中心": {
             icon: "bookmark",
+            class: "",
             link: "",
             sub: {
                 "个人资料": {
                     icon: "",
+                    class: "",
                     link: "../user/index.html",
                     sub: {}
                 },
                 "支付方式": {
                     icon: "",
+                    class: "",
                     link: "../user/payment.html",
                     sub: {}
                 },
                 "密码修改": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
                 "密保修改": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
@@ -36,20 +42,24 @@ var common = {
         },
         "市场管理": {
             icon: "list-alt",
+            class: "",
             link: "",
             sub: {
                 "开通会员": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
                 "推荐系谱": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
                 "注册会员": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
@@ -57,20 +67,24 @@ var common = {
         },
         "财务管理": {
             icon: "list",
+            class: "",
             link: "",
             sub: {
                 "本息明细": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
                 "领导奖励明细": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
                 "激活／排单重转账": {
                     icon: "",
+                    class: "",
                     link: "",
                     sub: {}
                 },
@@ -78,12 +92,14 @@ var common = {
         },
         "联系我们": {
             icon: "mobile",
+            class: "",
             link: "",
             sub: {}
         },
         "安全退出": {
             icon: "sign-out",
-            link: "../index.html",
+            class: "logout",
+            link: "",
             sub: {}
         }
     },
@@ -98,8 +114,9 @@ var common = {
 
 
         var menu = "";
-        menu += '<div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>';
         menu += '<div class="sideMenu">';
+        menu += '<img class="logo" src="http://pinwheel-cn.com/public/home/images/sas-logo.png">';
+
         $.each(common.menu,function (key,data) {
             if (data.link == "")
                 data.link = "javascript:void(0);";
@@ -110,6 +127,7 @@ var common = {
                 link=link.substr(3);
             if(link == common.selfLink)
                 data.icon += " on";
+            data.icon += " "+data.class;
             console.log(link);
             menu+='<h3 class="am-icon-'+data.icon+'"><em></em> <a href="'+data.link+'">'+key+'</a></h3>';
             menu += ' <ul>';
@@ -133,11 +151,11 @@ var common = {
                 data.icon = "arrow-right";
 
             var link = data.link;
-            var active = "";
+            var active = data.class;
             if(link.indexOf("../") == 0)
                 link=link.substr(3);
             if(link == common.selfLink)
-                active = 'active';
+                active = ' active';
             menu += '<li>';
             menu += '<a href="'+data.link+'" class="'+active+'"><span class="am-icon-'+data.icon+'"></span>'+key+'</a>';
             if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub)) {
@@ -173,6 +191,13 @@ var common = {
             triggerTime:150, //鼠标延迟触发时间（默认150）
             defaultPlay:true,//默认是否执行效果（默认true）
             returnDefault:false //鼠标从.sideMen移走后返回默认状态（默认false）
+        });
+
+        //安全退出
+        $(".sideMenu").find("li.logout").click(function (e) {
+
+
+            window.location.href="../index.html";
         });
     },
     showHeader:function(){
