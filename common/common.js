@@ -73,19 +73,19 @@ var common = {
                 "本息明细": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../manage/list.html",
                     sub: {}
                 },
                 "领导奖励明细": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../manage/reward.html",
                     sub: {}
                 },
                 "激活／排单重转账": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../manage/schedule.html",
                     sub: {}
                 },
             }
