@@ -35,7 +35,7 @@ var common = {
                 "密保修改": {
                     icon: "",
                     class: "",
-                    link: "../user/protected.html",
+                    link: "../user/protect.html",
                     sub: {}
                 },
             }

@@ -28,11 +28,122 @@
                     获取帮助
                 </a>
             </div>
+
+            <div class="am-u-sm-12">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd">我的支付方式</div>
+                    <div class="am-panel-bd" style="padding: 10px;padding-bottom: 50px">
+                        <div class="am-scrollable-horizontal">
+                            <table class="am-table am-table-bordered am-table-striped am-text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>支付方式</th>
+                                        <th>支付账户</th>
+                                        <th>开户姓名</th>
+                                        <th>银行开户行</th>
+                                        <th>添加日期</th>
+                                        <th>操作</th>
+                                        <th>删除</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>招商银行</td>
+                                        <td>621485******4726</td>
+                                        <td>杨XX</td>
+                                        <td></td>
+                                        <td>2016-10-12</td>
+                                        <td><span style="color:#f00">默认</span></td>
+                                        <td>
+                                            <form action="" method="post">
+                                                <input type="hidden" name="deid" value="511">
+                                                <input type="submit" class="delete" value="删除" onclick="return boxcheck('您确定要删除这条信息吗？','删除中，请耐心等待。。。')" style="border:none;background:transparent;font-size:14px;color:blue;cursor:pointer;">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="am-btn am-btn-success am-fr btn-add-payment">添  加</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-u-sm-12  add-bank-card hide" style="display: none;">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd">添加支付方式</div>
+                    <div class="am-panel-bd">
+
+                        <form class="am-form am-form-horizontal">
+                            <div class="am-form-group">
+                                <label for="form-select-1" class="am-u-sm-2 am-form-label"> 支付方式</label>
+                                <div class="am-u-sm-10">
+                                    <select id="form-select-1">
+                                        <option value="option1">--请选择--</option>
+                                        <option value="option2">中国银行</option>
+                                        <option value="option3">中国农业银行</option>
+                                        <option value="option4">中国工商银行</option>
+                                        <option value="option5">中国建设银行</option>
+                                        <option value="option6">交通银行</option>
+                                        <option value="option7">招商银行</option>
+                                        <option value="option8">支付宝</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="form-input-2" class="am-u-sm-2 am-form-label">支付账户</label>
+                                <div class="am-u-sm-10">
+                                    <input type="text" id="form-input-2" class="am-form-field" placeholder="" value="">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="form-input-3" class="am-u-sm-2 am-form-label">开户姓名</label>
+                                <div class="am-u-sm-10">
+                                    <input type="text" id="form-input-3" class="am-form-field" placeholder="" value="">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="form-input-4" class="am-u-sm-2 am-form-label">银行开户行</label>
+                                <div class="am-u-sm-10">
+                                    <input type="text" id="form-input-4" class="am-form-field" placeholder="" value="">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-10 am-u-sm-offset-2">
+                                    <button type="submit" class="am-btn am-btn-warning">添  加</button>
+
+                                    <span class="am-btn am-btn-secondary close-add">返  回</span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="../common/app.js"></script>
 <script src="../common/common.js"></script>
+<script>
+    $("button.btn-add-payment").click(function () {
+        var form_div = $("div.add-bank-card");
+        if(form_div.hasClass("show"))
+            return false;
+        form_div.fadeIn().addClass("show");
+    });
+    $(".close-add").click(function () {
+        var form_div = $("div.add-bank-card");
+        form_div.fadeOut().removeClass("show");
+    });
+
+</script>
 </body>
 </html>
