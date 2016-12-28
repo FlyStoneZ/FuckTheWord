@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>提供帮助</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="../common/css/admin.css">
+    <style>
+        .amount label:nth-child(n+2){
+            margin-left: 30px!important;
+        }
+    </style>
 </head>
 <body>
 <script src="../common/jquery.min.js"></script>
@@ -33,6 +38,33 @@
                 <div class="am-panel am-panel-default am-panel-black">
                     <div class="am-panel-hd">提供帮助</div>
                     <div class="am-panel-bd">
+                        <h2 style="color: #734C07;font-weight: 100; border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;">默认银行：招商银行 <span style="margin-left: 30px;">姓名：杨XX</span></h2>
+                        <p style="margin: 8px 0;">请选择金额</p>
+                        <form>
+                            <div class="am-btn-group amount" data-am-button>
+                                <label class="am-btn am-btn-sm  am-btn-default">
+                                    <input type="radio" name="options" value="选项 1" id="option1" required> 2000
+                                </label>
+                                <label class="am-btn am-btn-sm  am-btn-secondary">
+                                    <input type="radio" name="options" value="选项 2" id="option2"> 5000
+                                </label>
+                                <label class="am-btn am-btn-sm  am-btn-primary">
+                                    <input type="radio" name="options" value="选项 3" id="option3"> 10000
+                                </label>
+                                <label class="am-btn am-btn-sm  am-btn-warning">
+                                    <input type="radio" name="options" value="选项 4" id="option4"> 20000
+                                </label>
+                                <label class="am-btn am-btn-sm  am-btn-danger am-disabled">
+                                    <input type="radio" name="options" value="选项 5" id="option5"> 30000
+                                </label>
+                            </div>
+                            <div class="am-form-group" style="padding: 20px 0; margin-bottom:40px;">
+                                <label for="doc-ipt-pwd-1">交易密码</label>
+                                <input type="password" class="am-u-sm-12 am-form-field" id="doc-ipt-pwd-1" placeholder="" required>
+                            </div>
+
+                            <button class="am-btn am-btn-success">确  定</button>
+                        </form>
                     </div>
                 </div>
             </div>

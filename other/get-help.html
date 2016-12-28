@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>提供帮助</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="../common/css/admin.css">
+    <style>
+        form .am-form-group{padding: 20px 0; }
+    </style>
 </head>
 <body>
 <script src="../common/jquery.min.js"></script>
@@ -33,6 +36,25 @@
                 <div class="am-panel am-panel-default am-panel-black">
                     <div class="am-panel-hd">提供帮助</div>
                     <div class="am-panel-bd">
+                        <h2 style="color: #734C07;font-weight: 100; border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;">默认银行：招商银行 <span style="margin-left: 30px;">姓名：杨XX</span></h2>
+                        <form>
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-txt-1">可提本息：<span>0</span></label>
+                                <input type="text" class="am-u-sm-12 am-form-field" id="doc-ipt-txt-1" placeholder="" required>
+                            </div>
+
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-txt-2">可提领导奖：<span>23892.00</span></label>
+                                <input type="text" class="am-u-sm-12 am-form-field" id="doc-ipt-txt-2" placeholder="" required>
+                            </div>
+
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-pwd-1">交易密码</label>
+                                <input type="password" class="am-u-sm-12 am-form-field" id="doc-ipt-pwd-1" placeholder="" required>
+                            </div>
+
+                            <button class="am-btn am-btn-success" style="margin-top: 30px">确  定</button>
+                        </form>
                     </div>
                 </div>
             </div>
