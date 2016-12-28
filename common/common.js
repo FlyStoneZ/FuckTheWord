@@ -114,7 +114,8 @@ var common = {
 
 
         var menu = "";
-        menu += '<div class="sideMenu am-u-sm-12 am-u-md-4 am-u-lg-2">';
+        menu += '<div class="sideMenu am-u-sm-12 am-u-md-3 am-u-lg-2">';
+        menu += '<div class="fixed" >';
         menu += '<img class="logo" src="http://pinwheel-cn.com/public/home/images/sas-logo.png">';
 
         $.each(common.menu,function (key,data) {
@@ -136,6 +137,7 @@ var common = {
             }
             menu += '</ul>';
         });
+        menu += "</div>";
         menu += "</div>";
 
         console.log(menu);
@@ -203,6 +205,9 @@ var common = {
     showHeader:function(){
         var header = '<h1 class="am-topbar-brand">欢迎 <span class="nickname">ywt0111</span> 回来！请使用闲置资金！<span class="am-icon-list showMenu"></span></h1>';
         $("header").append(header);
+        // header fixed补充高度
+        // $("header").after('<div class="header-top"></div>');
+
         $("header").find("span.showMenu").click(function () {
            $(".sideMenu").toggleClass("active");
         });
@@ -212,9 +217,10 @@ var common = {
         footer += '<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >'
             +'<a href="#top" title="回到顶部">'
             +'<span class="am-gotop-title">回到顶部</span>'
-            +'<i class="am-icon-btn am-icon-chevron-up am-active"></i>'
+            +'<i class="am-icon-btn am-icon-chevron-up am-active" style="margin-left:-25%;"></i>'
             +'</a>'
             +'</div>';
+        footer += "</footer>";
         $(".admin-main").append(footer);
     },
     run: function () {

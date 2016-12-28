@@ -1,0 +1,10 @@
+@charset "utf-8";/*清风抚雪2014年12月7日 11:21:18 zfengyu@foxmail.com*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, th, td{margin:0;padding:0}
+body, button, input{font-family:微软雅黑, tahoma, arial, sans-serif;font-size:14px;line-height:1.5;color:#525252}
+address, cite, dfn, em, var{font-style:normal}
+ul, ol{list-style:none}
+a{text-decoration:none;color:#414141}
+a:hover{color:#804e15;text-decoration:underline}
+img{border:none}
+h1, h2, h3, h4, h5, h6, button, input{font-size:100%}
+*{margin:0;padding:0;}

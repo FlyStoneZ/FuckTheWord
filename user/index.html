@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>会员中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="../common/css/admin.css">
 </head>
@@ -13,39 +14,435 @@
 <header class="am-topbar">
 </header>
 <div class="am-cf admin-main am-g">
-    <div class=" admin-content am-u-sm-12 am-u-md-8 am-u-lg-10">
+    <div class=" admin-content am-u-sm-12 am-u-md-9 am-u-md-offset-3 am-u-lg-10 am-u-lg-offset-2">
         <div class="am-g content">
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
                 <a class="am-btn am-btn-success am-btn-block" href="./help.html">
-                    <img src="http://pinwheel-cn.com/theme/images/setbg.png" height="40px">
+                    <img src="http://pinwheel-cn.com/theme/images/setbg.png" height="30px">
                     提供帮助
                 </a>
             </div>
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
                 <a class="am-btn am-btn-warning am-btn-block" href="./help.html">
-                    <img src="http://pinwheel-cn.com/theme/images/setbg.png" height="40px">
+                    <img src="http://pinwheel-cn.com/theme/images/setbg.png" height="30px">
                     获取帮助
                 </a>
             </div>
             <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                 <a class="am-btn am-btn-secondary am-btn-block" href="./help.html" style="text-align: left;padding-left: 5%;">
-                    <span class="am-icon-home"></span>
+                    <i class="am-icon-home"></i>
                     我的推广链接：http://pinwheel-cn.com/r1.php?tid=ywt0111
                 </a>
             </div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6"></div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd"><i class="am-icon-venus"></i> 我的账户</div>
+                    <div class="am-panel-bd">
+                        <div class="am-g" style="padding: 0 15px ;">
+                            <div class="am-u-sm-5" style="border: 1px solid #ddd;border-right: none;padding :10px;">
+                                <p><span class="am-badge am-round am-badge-warning">1</span><span class="badge-inline am-badge">账号</span></p>
+                                <p><span class="am-badge am-round am-badge-success">2</span><span class="badge-inline am-badge">昵称</span></p>
+                                <p><span class="am-badge am-round am-badge-secondary">3</span><span class="badge-inline am-badge">级别</span></p>
+                                <p><span class="am-badge am-round am-badge-danger">4</span><span class="badge-inline am-badge">个人资料</span></p>
+                                <p><span class="am-badge am-round am-badge-success">5</span><span class="badge-inline am-badge">开户姓名</span></p>
+                                <p><span class="am-badge am-round am-badge-warning">6</span><span class="badge-inline am-badge">激活码</span></p>
+                                <p><span class="am-badge am-round am-badge-success">7</span><span class="badge-inline am-badge">排单币</span></p>
+                                <p><span class="am-badge am-round am-badge-secondary">8</span><span class="badge-inline am-badge">静态钱包</span></p>
+                                <p><span class="am-badge am-round am-badge-danger">9</span><span class="badge-inline am-badge">动态钱包</span></p>
+                                <p><span class="am-badge am-round am-badge-success">10</span><span class="badge-inline am-badge">注册时间</span></p>
+                            </div>
+                            <div class="am-u-sm-7" style="text-align: center;border: 1px solid #ddd;font-size: 14px;line-height:25px;padding :10px 0;">
+                                <p>ywt0111</p>
+                                <p>杨二</p>
+                                <p>v2</p>
+                                <p>修改个人资料</p>
+                                <p>XXXXXX</p>
+                                <p>ABC242</p>
+                                <p>2.00</p>
+                                <p>12300.00</p>
+                                <p>1222222.00</p>
+                                <p>2016-08-12</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd"><i class="am-icon-venus"></i> 我的新闻</div>
+                    <div class="am-panel-bd" style="padding:10px 15px;">
+                        <a class="am-btn am-btn-secondary am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            公告
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+                        <a class="am-btn am-btn-success am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            description
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+                        <a class="am-btn am-btn-warning am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            message
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+                        <a class="am-btn am-btn-primary am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            title
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+                        <a class="am-btn am-btn-danger am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            title
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+                        <a class="am-btn am-btn-default am-btn-block" href="../other/news.html" style="text-align: left;padding: 8px 10px;margin-bottom:10px;">
+                            title
+                            <span class="am-fr">2016-12-22</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-12">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd"><i class="am-icon-clock-o"></i> 提供帮助记录</div>
+                    <div class="am-panel-bd" style="padding: 10px;">
+                        <div class="am-scrollable-horizontal">
+                            <table class="am-table am-table-bordered am-table-striped am-text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th width="8%">序号</th>
+                                        <th valign="middle" width="10%">提供帮助编号</th>
+                                        <th valign="middle" width="15%">提供帮助时间</th>
+                                        <th valign="middle" width="15%">提供帮助金额</th>
+                                        <th valign="middle" width="15%">已配对金额</th>
+                                        <th valign="middle" width="14%">状态</th>
+                                        <th valign="middle" width="15%">配对结束日期</th>
+                                        <th valign="middle" width="8%">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="center">1</td>
+                                        <td align="center">T21233211220163</td>
+                                        <td align="center">2016-12-13 12:23:32</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">0</td>
+                                        <td align="center">
+                                            <span style="color:#49AB47">等待匹配</span>				</td>
+                                        <td align="center"></td>
+                                        <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=17367">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">2</td>
+                                        <td align="center">T31193502220166</td>
+                                        <td align="center">2016-12-06 23:19:35</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center">2016-12-15 09:59:06</td>
+                                        <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=14281">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">3</td>
+                                        <td align="center">T91384020120169</td>
+                                        <td align="center">2016-11-29 09:38:40</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center">2016-12-08 10:04:16</td>
+                                        <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=11099">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">4</td>
+                                        <td align="center">T81573620120162</td>
+                                        <td align="center">2016-11-22 08:57:36</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">2000</td>
+                                        <td align="center">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center">2016-12-02 09:47:11</td>
+                                        <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=8893">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">5</td>
+                                        <td align="center">T81421110120165</td>
+                                        <td align="center">2016-11-15 08:42:11</td>
+                                        <td align="center">20000</td>
+                                        <td align="center">20000</td>
+                                        <td align="center">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center">2016-11-20 11:52:14</td>
+                                        <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=6972">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">6</td>
+                                        <td align="center" valign="middle">T31564901120168</td>
+                                        <td align="center" valign="middle">2016-11-08 13:56:49</td>
+                                        <td align="center" valign="middle">20000</td>
+                                        <td align="center" valign="middle">20000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-11-16 09:46:00</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=5161">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">7</td>
+                                        <td align="center" valign="middle">T21091201120162</td>
+                                        <td align="center" valign="middle">2016-11-02 12:09:12</td>
+                                        <td align="center" valign="middle">20000</td>
+                                        <td align="center" valign="middle">20000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-11-13 09:27:09</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=3769">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">8</td>
+                                        <td align="center" valign="middle">T41590921020167</td>
+                                        <td align="center" valign="middle">2016-10-27 14:59:09</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-11-09 10:42:40</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=2741">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">9</td>
+                                        <td align="center" valign="middle">T41572721020162</td>
+                                        <td align="center" valign="middle">2016-10-22 14:57:27</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-11-03 10:09:23</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=2110">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">10</td>
+                                        <td align="center" valign="middle">T91172510020166</td>
+                                        <td align="center" valign="middle">2016-10-16 09:17:25</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-10-31 09:11:40</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=1425">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">11</td>
+                                        <td align="center" valign="middle">T51183401020169</td>
+                                        <td align="center" valign="middle">2016-10-09 15:18:34</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-10-27 10:26:16</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=927">查看</a></td>
+                                    </tr>
+                                    <tr class="hiddenck">
+                                        <td align="center">12</td>
+                                        <td align="center" valign="middle">T81472800020163</td>
+                                        <td align="center" valign="middle">2016-10-03 08:47:28</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">30000</td>
+                                        <td align="center" valign="middle">
+                                            <span style="color:#ff6600">交易完成</span>				</td>
+                                        <td align="center" valign="middle">2016-10-20 10:06:13</td>
+                                        <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=619">查看</a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <button class="table-more am-btn am-btn-warning am-u-sm-8 am-u-sm-offset-2 am-u-md-4 am-u-md-offset-4 am-u-lg-2 am-u-lg-offset-5">
+                                查看更多详情<i class="am-icon-angle-double-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-u-sm-12">
+                <div class="am-panel am-panel-default am-panel-black">
+                    <div class="am-panel-hd"><i class="am-icon-clock-o"></i> 获得帮助记录</div>
+                    <div class="am-panel-bd" style="padding: 10px;">
+                        <div class="am-scrollable-horizontal">
+                            <table class="am-table am-table-bordered am-table-striped am-text-nowrap">
+                                <thead>
+                                <tr>
+                                    <th width="8%">序号</th>
+                                    <th valign="middle" width="10%">提供帮助编号</th>
+                                    <th valign="middle" width="15%">提供帮助时间</th>
+                                    <th valign="middle" width="15%">提供帮助金额</th>
+                                    <th valign="middle" width="15%">已配对金额</th>
+                                    <th valign="middle" width="14%">状态</th>
+                                    <th valign="middle" width="15%">配对结束日期</th>
+                                    <th valign="middle" width="8%">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td align="center">1</td>
+                                    <td align="center">T21233211220163</td>
+                                    <td align="center">2016-12-13 12:23:32</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">0</td>
+                                    <td align="center">
+                                        <span style="color:#49AB47">等待匹配</span>				</td>
+                                    <td align="center"></td>
+                                    <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=17367">查看</a></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">2</td>
+                                    <td align="center">T31193502220166</td>
+                                    <td align="center">2016-12-06 23:19:35</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center">2016-12-15 09:59:06</td>
+                                    <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=14281">查看</a></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">3</td>
+                                    <td align="center">T91384020120169</td>
+                                    <td align="center">2016-11-29 09:38:40</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center">2016-12-08 10:04:16</td>
+                                    <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=11099">查看</a></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">4</td>
+                                    <td align="center">T81573620120162</td>
+                                    <td align="center">2016-11-22 08:57:36</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">2000</td>
+                                    <td align="center">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center">2016-12-02 09:47:11</td>
+                                    <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=8893">查看</a></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">5</td>
+                                    <td align="center">T81421110120165</td>
+                                    <td align="center">2016-11-15 08:42:11</td>
+                                    <td align="center">20000</td>
+                                    <td align="center">20000</td>
+                                    <td align="center">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center">2016-11-20 11:52:14</td>
+                                    <td align="center"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=6972">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">6</td>
+                                    <td align="center" valign="middle">T31564901120168</td>
+                                    <td align="center" valign="middle">2016-11-08 13:56:49</td>
+                                    <td align="center" valign="middle">20000</td>
+                                    <td align="center" valign="middle">20000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-11-16 09:46:00</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=5161">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">7</td>
+                                    <td align="center" valign="middle">T21091201120162</td>
+                                    <td align="center" valign="middle">2016-11-02 12:09:12</td>
+                                    <td align="center" valign="middle">20000</td>
+                                    <td align="center" valign="middle">20000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-11-13 09:27:09</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=3769">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">8</td>
+                                    <td align="center" valign="middle">T41590921020167</td>
+                                    <td align="center" valign="middle">2016-10-27 14:59:09</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-11-09 10:42:40</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=2741">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">9</td>
+                                    <td align="center" valign="middle">T41572721020162</td>
+                                    <td align="center" valign="middle">2016-10-22 14:57:27</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-11-03 10:09:23</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=2110">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">10</td>
+                                    <td align="center" valign="middle">T91172510020166</td>
+                                    <td align="center" valign="middle">2016-10-16 09:17:25</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-10-31 09:11:40</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=1425">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">11</td>
+                                    <td align="center" valign="middle">T51183401020169</td>
+                                    <td align="center" valign="middle">2016-10-09 15:18:34</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-10-27 10:26:16</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=927">查看</a></td>
+                                </tr>
+                                <tr class="hiddenck">
+                                    <td align="center">12</td>
+                                    <td align="center" valign="middle">T81472800020163</td>
+                                    <td align="center" valign="middle">2016-10-03 08:47:28</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">30000</td>
+                                    <td align="center" valign="middle">
+                                        <span style="color:#ff6600">交易完成</span>				</td>
+                                    <td align="center" valign="middle">2016-10-20 10:06:13</td>
+                                    <td align="center" valign="middle"><a href="home.php?lsact=cunkuan&amp;templist=2&amp;pdid=619">查看</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <button class="table-more am-btn am-btn-warning am-u-sm-8 am-u-sm-offset-2 am-u-md-4 am-u-md-offset-4 am-u-lg-2 am-u-lg-offset-5">
+                                查看更多详情<i class="am-icon-angle-double-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
 <script src="../common/app.js"></script>
 <script src="../common/common.js"></script>
+<script>
+    $("button.table-more").click(function (e) {
+        var table = $(this).parent().find("table");
+        var i = $(this).find("i");
+        var class_less = "am-icon-angle-double-down";
+        var class_more = "am-icon-angle-double-up";
+        if(i.hasClass(class_less)){
+            table.find("tr").removeClass("hiddenck");
+            i.removeClass(class_less).addClass(class_more);
+        }else{
+            table.find("tr:nth-child(n+6)").addClass("hiddenck");
+            i.removeClass(class_more).addClass(class_less);
+        }
+    })
+</script>
 </body>
 </html>
