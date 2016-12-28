@@ -82,7 +82,7 @@ var common = {
                     link: "../manage/reward.html",
                     sub: {}
                 },
-                "激活／排单重转账": {
+                "激活／排单币转账": {
                     icon: "",
                     class: "",
                     link: "../manage/schedule.html",

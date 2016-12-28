@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>会员中心</title>
+    <title>激活/排单币转账</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="../common/css/admin.css">
+    <style>
+        form .am-form-group{padding: 20px 0; }
+    </style>
 </head>
 <body>
 <script src="../common/jquery.min.js"></script>
@@ -31,8 +34,37 @@
 
             <div class="am-u-sm-12">
                 <div class="am-panel am-panel-default am-panel-black">
-                    <div class="am-panel-hd">提供帮助</div>
+                    <div class="am-panel-hd">激活/排单币转账</div>
                     <div class="am-panel-bd">
+                        <h2 style="color: #734C07;font-weight: 100; border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;">注意：此操作点击确定后不可逆转，请仔细输入。</h2>
+                        <form>
+                            <div class="am-form-group" style="padding: 0">
+                                <label for="form-select-1">转账类型</label>
+                                <select id="form-select-1" class="am-form-field" required>
+                                    <option value="">--请选择--</option>
+                                    <option value="option2">激活币</option>
+                                    <option value="option3">排单币</option>
+                                </select>
+                            </div>
+
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-txt-3">对方账号</label>
+                                <input type="text" class="am-u-sm-12 am-form-field" id="doc-ipt-txt-3" placeholder="" required>
+                            </div>
+
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-txt-2">转账数量</label>
+                                <input type="text" class="am-u-sm-12 am-form-field" id="doc-ipt-txt-2" placeholder="" required>
+                            </div>
+
+                            <div class="am-form-group" >
+                                <label for="doc-ipt-pwd-1">转账备注</label>
+                                <input type="text" class="am-u-sm-12 am-form-field" id="doc-ipt-pwd-1" placeholder="" required>
+                            </div>
+
+                            <button class="am-btn am-btn-success" style="margin-top: 30px">确  定</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
