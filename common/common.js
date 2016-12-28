@@ -223,10 +223,30 @@ var common = {
         footer += "</footer>";
         $(".admin-main").append(footer);
     },
+    verifyForm:function () {
+        $('form').validator({
+            onValid: function(validity) {
+                $(validity.field).closest('.am-form-group>div').find('.am-alert').hide();
+            },
+            onInValid: function(validity) {
+                var $field = $(validity.field);
+                var $group = $field.closest('.am-form-group>div');
+                var $alert = $group.find('.am-alert');
+                // 使用自定义的提示信息 或 插件内置的提示信息
+                var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+                if (!$alert.length) {
+                    $alert = $alert.hide().
+                    appendTo($group);
+                }
+                $alert.html(msg).show();
+            }
+        });
+    },
     run: function () {
         this.showHeader();
         this.showMenu();
         this.showFooter();
+        this.verifyForm();
     }
 };
 common.run();
