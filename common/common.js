@@ -6,7 +6,7 @@ var common = {
         "首页": {
             icon: "home",
             class: "",
-            link: "",
+            link: "../other/index.html",
             sub: {}
         },
         "会员中心": {
@@ -29,13 +29,13 @@ var common = {
                 "密码修改": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../user/password.html",
                     sub: {}
                 },
                 "密保修改": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../user/protected.html",
                     sub: {}
                 },
             }
@@ -48,19 +48,19 @@ var common = {
                 "开通会员": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../market/open.html",
                     sub: {}
                 },
                 "推荐系谱": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../market/family.html",
                     sub: {}
                 },
                 "注册会员": {
                     icon: "",
                     class: "",
-                    link: "",
+                    link: "../market/register.html",
                     sub: {}
                 },
             }
