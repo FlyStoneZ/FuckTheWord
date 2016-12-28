@@ -46,3 +46,6 @@ span.badge-inline{background-color: transparent;color:#444;}
 p{padding:0;margin:0;}
 table{font-size: 14px;}
 table tr.hiddenck{display:none;}
+
+form{font-size: 14px;line-height: 1;}
+form label{font-weight:100;}

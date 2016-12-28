@@ -93,7 +93,7 @@ var common = {
         "联系我们": {
             icon: "mobile",
             class: "",
-            link: "",
+            link: "../other/contact.html",
             sub: {}
         },
         "安全退出": {
