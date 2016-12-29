@@ -13,31 +13,31 @@
     <img class="logo" src="http://pinwheel-cn.com/public/home/images/sas-logo.png">
     <form class="am-form am-form-horizontal">
         <div class="am-form-group">
-            <label for="doc-ipt-3" class="am-u-sm-4 am-form-label">电子邮件</label>
+            <label for="doc-ipt-3" class="am-u-sm-2  am-form-label">用户名</label>
+            <div class="am-u-sm-10">
+                <input type="email" id="doc-ipt-3" placeholder="">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label">密码</label>
+            <div class="am-u-sm-10">
+                <input type="password" id="doc-ipt-pwd-2" placeholder="">
+            </div>
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-code-2" class="am-u-sm-2 am-form-label">验证码</label>
             <div class="am-u-sm-8">
-                <input type="email" id="doc-ipt-3" placeholder="输入你的电子邮件">
+                <input type="password" id="doc-code-2" placeholder="">
+            </div>
+            <div class="am-u-sm-2" style="padding-left: 0;text-align: right;">
+                <img src="http://pinwheel-cn.com/include/code.php" onclick="$(this).attr('src',$(this).attr('src')+'?t='+Math.random(0,1000));" width="100%">
             </div>
         </div>
 
         <div class="am-form-group">
-            <label for="doc-ipt-pwd-2" class="am-u-sm-4 am-form-label">密码</label>
-            <div class="am-u-sm-8">
-                <input type="password" id="doc-ipt-pwd-2" placeholder="设置一个密码吧">
-            </div>
-        </div>
-
-        <div class="am-form-group">
-            <label for="doc-code-2" class="am-u-sm-4 am-form-label">验证码</label>
-            <div class="am-u-sm-5">
-                <input type="password" id="doc-code-2" placeholder="图片验证码">
-            </div>
-            <div class="am-u-sm-3" style="padding-left: 0;text-align: right;">
-                <img src="http://pinwheel-cn.com/include/code.php" onclick="$(this).attr('src',$(this).attr('src')+'?t='+Math.random(0,1000));">
-            </div>
-        </div>
-
-        <div class="am-form-group">
-            <div class="am-u-sm-offset-4 am-u-sm-8">
+            <div class="am-u-sm-offset-2 am-u-sm-10">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox"> 记住密码
@@ -47,15 +47,15 @@
         </div>
 
         <div class="am-form-group">
-            <div class="am-u-sm-8 am-u-sm-offset-4">
+            <div class="am-u-sm-10 am-u-sm-offset-2">
                 <a href="./other/index.html" type="submit" class="am-btn am-btn-success am-btn-block">提交登入</a>
             </div>
         </div>
 
         <div class="am-form-group bottom">
-            <div class="am-u-sm-8 am-u-sm-offset-4 am-g">
+            <div class="am-u-sm-10 am-u-sm-offset-2 am-g">
                 <a class="am-fl">忘记密码</a>
-                <span class="am-fr reg">还不是会员？<a class="red">立即注册</a></span>
+                <span class="am-fr reg">还不是会员？<a class="red" href="./sign-up-1.html">立即注册</a></span>
             </div>
         </div>
     </form>
