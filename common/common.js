@@ -103,7 +103,7 @@ var common = {
             sub: {}
         }
     },
-    selfLink:"",
+    selfLink: "",
     showMenu: function () {
         //获取当前的link
         var pathname = window.location.pathname;
@@ -118,19 +118,23 @@ var common = {
         menu += '<div class="fixed" >';
         menu += '<img class="logo" src="http://pinwheel-cn.com/public/home/images/sas-logo.png">';
 
-        $.each(common.menu,function (key,data) {
+        $.each(common.menu, function (key, data) {
             if (data.link == "")
                 data.link = "javascript:void(0);";
             if (data.icon == "")
                 data.icon = "arrow-right";
             var link = data.link;
-            if(link.indexOf("../") == 0)
-                link=link.substr(3);
-            if(link == common.selfLink)
+            if (link.indexOf("../") == 0)
+                link = link.substr(3);
+            if (link == common.selfLink)
                 data.icon += " on";
-            data.icon += " "+data.class;
+            data.icon += " " + data.class;
             console.log(link);
-            menu+='<h3 class="am-icon-'+data.icon+'"><em></em> <a href="'+data.link+'">'+key+'</a></h3>';
+            var icon = "";
+            if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub))
+                icon += "<em></em>";
+
+            menu += '<h3 class="am-icon-' + data.icon + '">' + icon + '<a href="' + data.link + '">' + key + '</a></h3>';
             menu += ' <ul>';
             if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub)) {
                 menu += common.getSubMenu(data.sub);
@@ -154,12 +158,12 @@ var common = {
 
             var link = data.link;
             var active = data.class;
-            if(link.indexOf("../") == 0)
-                link=link.substr(3);
-            if(link == common.selfLink)
+            if (link.indexOf("../") == 0)
+                link = link.substr(3);
+            if (link == common.selfLink)
                 active = ' active';
             menu += '<li>';
-            menu += '<a href="'+data.link+'" class="'+active+'"><span class="am-icon-'+data.icon+'"></span>'+key+'</a>';
+            menu += '<a href="' + data.link + '" class="' + active + '"><span class="am-icon-' + data.icon + '"></span>' + key + '</a>';
             if (data.hasOwnProperty("sub") && !common.isEmptyObj(data.sub)) {
                 menu += ' <ul>';
                 menu += common.getSubMenu(data.sub);
@@ -169,74 +173,73 @@ var common = {
         });
         return menu;
     },
-    isEmptyObj:function (obj) {
-        if(typeof (obj) != "object")
+    isEmptyObj: function (obj) {
+        if (typeof (obj) != "object")
             return false;
-        for (o in obj){
+        for (o in obj) {
             return false;
         }
         return true;
     },
-    menuJs:function () {
+    menuJs: function () {
         $(".sideMenu").find("h3").removeClass("on");
         $(".sideMenu").find("a").each(function () {
-           if($(this).hasClass("active")){
-               $(this).parent().parent().prev().addClass("on");
-           }
+            if ($(this).hasClass("active")) {
+                $(this).parent().parent().prev().addClass("on");
+            }
         });
 
         jQuery(".sideMenu").slide({
-            titCell:"h3", //鼠标触发对象
-            targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-            effect:"slideDown", //targetCell下拉效果
-            delayTime:300 , //效果时间
-            triggerTime:150, //鼠标延迟触发时间（默认150）
-            defaultPlay:true,//默认是否执行效果（默认true）
-            returnDefault:false //鼠标从.sideMen移走后返回默认状态（默认false）
+            titCell: "h3", //鼠标触发对象
+            targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+            effect: "slideDown", //targetCell下拉效果
+            delayTime: 300, //效果时间
+            triggerTime: 150, //鼠标延迟触发时间（默认150）
+            defaultPlay: true,//默认是否执行效果（默认true）
+            returnDefault: false //鼠标从.sideMen移走后返回默认状态（默认false）
         });
 
         //安全退出
-        $(".sideMenu").find("li.logout").click(function (e) {
+        $(".sideMenu h3.logout").click(function (e) {
 
 
-            window.location.href="../index.html";
+            window.location.href = "../index.html";
         });
     },
-    showHeader:function(){
+    showHeader: function () {
         var header = '<h1 class="am-topbar-brand">欢迎 <span class="nickname">ywt0111</span> 回来！请使用闲置资金！<span class="am-icon-list showMenu"></span></h1>';
         $("header").append(header);
         // header fixed补充高度
         // $("header").after('<div class="header-top"></div>');
 
         $("header").find("span.showMenu").click(function () {
-           $(".sideMenu").toggleClass("active");
+            $(".sideMenu").toggleClass("active");
         });
     },
-    showFooter:function () {
+    showFooter: function () {
         var footer = "<footer>";
         footer += '<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >'
-            +'<a href="#top" title="回到顶部">'
-            +'<span class="am-gotop-title">回到顶部</span>'
-            +'<i class="am-icon-btn am-icon-chevron-up am-active" style="margin-left:-25%;"></i>'
-            +'</a>'
-            +'</div>';
+            + '<a href="#top" title="回到顶部">'
+            + '<span class="am-gotop-title">回到顶部</span>'
+            + '<i class="am-icon-btn am-icon-chevron-up am-active" style="margin-left:-25%;"></i>'
+            + '</a>'
+            + '</div>';
         footer += "</footer>";
         $(".admin-main").append(footer);
     },
-    verifyForm:function () {
+    verifyForm: function () {
         $('form').validator({
-            onValid: function(validity) {
+            onValid: function (validity) {
                 $(validity.field).closest('.am-form-group>div').find('.am-alert').hide();
             },
-            onInValid: function(validity) {
+            onInValid: function (validity) {
                 var $field = $(validity.field);
                 var $group = $field.closest('.am-form-group>div');
                 var $alert = $group.find('.am-alert');
                 // 使用自定义的提示信息 或 插件内置的提示信息
                 var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
                 if (!$alert.length) {
-                    $alert = $alert.hide().
-                    appendTo($group);
+                    $alert = $alert.hide().appendTo($group);
                 }
                 $alert.html(msg).show();
             }
