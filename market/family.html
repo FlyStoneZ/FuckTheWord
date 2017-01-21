@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <link rel="stylesheet" type="text/css" href="http://amazeui.github.io/tree/amazeui.tree.css">
     <link rel="stylesheet" href="../common/css/admin.css">
     <style>
         i.am-icon-male{color: #0084C7;}
@@ -16,6 +17,7 @@
 <body>
 <script src="../common/jquery.min.js"></script>
 <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+<script src="http://amazeui.github.io/tree/amazeui.tree.js"></script>
 <header class="am-topbar">
 </header>
 <div class="am-cf admin-main">
@@ -60,13 +62,26 @@
 
                         <div style="padding-left: 30px;padding-top: 30px;">
                             <p><i class="am-icon-male"></i> ywt0111 [V2] [杨文涛] [37][正常]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-male"></i> NXF001 [V4] [倪孝福] [248][冻结]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-female"></i> NXF002 [V1] [倪萍] [60][冻结]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-female"></i> NXF003 [V1] [茹龙美] [22][冻结]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-male"></i> zr123 [V1] [张荣] [0][正常]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-female"></i> mingyue [V1] [蔡怀 红] [1][正常]</p>
-                            <p><i class="am-icon-long-arrow-right"></i><i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]</p>
+                            <ul class="am-tree" role="tree" id="myTree" style="margin:0;padding-left:20px;">
+                              <li class="am-tree-branch am-hide" data-template="treebranch" role="treeitem" aria-expanded="false">
+                                <div class="am-tree-branch-header">
+                                  <button class="am-tree-branch-name">
+                                    <span class="am-tree-icon am-tree-icon-folder"></span>
+                                    <span class="am-tree-label"></span>
+                                  </button>
+                                </div>
+                                <ul class="am-tree-branch-children" role="group"></ul>
+                                <div class="am-tree-loader" role="alert">Loading...</div>
+                              </li>
+                              <li class="am-tree-item am-hide" data-template="treeitem" role="treeitem">
+                                <button class="am-tree-item-name">
+                                  <span class="am-tree-icon am-tree-icon-item"></span>
+                                  <span class="am-tree-label"></span>
+                                </button>
+                              </li>
+                            </ul>
                         </div>
+
 
                     </div>
                 </div>
@@ -77,5 +92,257 @@
 
 <script src="../common/app.js"></script>
 <script src="../common/common.js"></script>
+<script type="text/javascript">
+
+//假数据，可以通过任意方法获得
+var data = [
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> kazs1 [V2] [胡老财] [37][正常]',
+                type:"folder",
+                attr:{
+                    id:1
+                }
+
+            },
+            {
+                title:'<i class="am-icon-male"></i> NXF001 [V4] [倪孝福] [248][冻结]',
+                type:"folder",
+                attr:{
+                    id:2
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> NXF002 [V1] [倪萍] [60][冻结]',
+                type:"folder",
+                attr:{
+                    id:3
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> NXF003 [V1] [茹龙美] [22][冻结]',
+                type:"folder",
+                attr:{
+                    id:4
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> zr123 [V1] [张荣] [0][正常]',
+                type:"folder",
+                attr:{
+                    id:5
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> mingyue [V1] [蔡怀 红] [1][正常]',
+                type:"folder",
+                attr:{
+                    id:6
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]',
+                type:"item",
+                icon:"",
+                attr:{
+                    id:7
+                }
+            }
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> ywt0111 [V2] [杨XX] [37][正常]',
+                type:"folder",
+                attr:{
+                    id:3
+                }
+
+            },
+            {
+                title:'<i class="am-icon-male"></i> NXF001 [V4] [倪XX] [248][冻结]',
+                type:"item",
+                attr:{
+                    id:0
+                }
+            },
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-female"></i> mingyue [V1] [蔡怀 红] [1][正常]',
+                type:"folder",
+                attr:{
+                    id:6
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]',
+                type:"item",
+                attr:{
+                    id:7
+                }
+            }
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-female"></i> NXF002 [V1] [倪萍] [60][冻结]',
+                type:"folder",
+                attr:{
+                    id:3
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> NXF003 [V1] [茹龙美] [22][冻结]',
+                type:"folder",
+                attr:{
+                    id:4
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> zr123 [V1] [张荣] [0][正常]',
+                type:"folder",
+                attr:{
+                    id:5
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> mingyue [V1] [蔡怀 红] [1][正常]',
+                type:"folder",
+                attr:{
+                    id:6
+                }
+            },
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> NXF001 [V4] [倪孝福] [248][冻结]',
+                type:"folder",
+                attr:{
+                    id:2
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> NXF002 [V1] [倪萍] [60][冻结]',
+                type:"folder",
+                attr:{
+                    id:3
+                }
+            },
+            {
+                title:'<i class="am-icon-female"></i> NXF003 [V1] [茹龙美] [22][冻结]',
+                type:"folder",
+                attr:{
+                    id:4
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> zr123 [V1] [张荣] [0][正常]',
+                type:"folder",
+                attr:{
+                    id:5
+                }
+            },
+            {
+                title:'<i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]',
+                type:"item",
+                attr:{
+                    id:7
+                }
+            }
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]',
+                type:"item",
+                attr:{
+                    id:7
+                }
+            }
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> gyg123 [V1] [谷玉刚] [0][正常]',
+                type:"folder",
+                attr:{
+                    id:7
+                }
+            }
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> NXF001 [V4] [倪孝福] [248][冻结]',
+                type:"folder",
+                attr:{
+                    id:2
+                }
+            },
+        ]
+    },
+    {
+        data:[
+            {
+                title:'<i class="am-icon-male"></i> NXF001 [V4] [倪孝福] [248][冻结]',
+                type:"folder",
+                attr:{
+                    id:2
+                }
+            },
+        ]
+    },
+];
+
+
+var $myTree = $('#myTree');
+$myTree.tree({
+    dataSource: function(options, callback) {
+        var sourceData;
+        //模拟获取data数据，可以改写成任意的ajax
+        //此处通过attr中的id来获取sourceData
+        //是否子item点击
+        if(options.attr  && options.attr.id){
+            var id = options.attr.id;
+            sourceData = data[id];
+        }
+        //主item显示
+        else
+            sourceData = data[0];
+
+        setTimeout(function() {
+            callback(sourceData);
+        }, 400);
+    },
+    multiSelect: false,
+    cacheItems: true,
+    folderSelect: false
+}); 
+// .on('loaded.tree.amui', function(e) {
+// console.log('Loaded');
+// }).on('selected.tree.amui', function(e, selected) {
+// console.log('Select Event: ', selected);
+// console.log($myTree.tree('selectedItems'));
+// }).on('updated.tree.amui', function(e, selected) {
+// console.log('Updated Event: ', selected);
+// console.log($myTree.tree('selectedItems'));
+// }).on('opened.tree.amui', function(e, info) {
+// console.log('Open Event: ', info);
+// }).on('closed.tree.amui', function(e, info) {
+// console.log('Close Event: ', info);
+// });
+
+</script>
 </body>
 </html>

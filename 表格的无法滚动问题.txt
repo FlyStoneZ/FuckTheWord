@@ -1,0 +1,1 @@
+如果还有不滚动的，看看table有没有被<div class="am-scrollable-horizontal"></div>包着
